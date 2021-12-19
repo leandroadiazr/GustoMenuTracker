@@ -1,0 +1,911 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		089D62CCFD77CC787953D8B8 /* Pods_GustoMenuTracker_GustoMenuTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E27A8B92DEF27AF8E1726E /* Pods_GustoMenuTracker_GustoMenuTrackerUITests.framework */; };
+		B7BAC2981BCA1D3543650AF7 /* Pods_GustoMenuTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C83174BE20920A494A33404 /* Pods_GustoMenuTracker.framework */; };
+		DB1A3EB498E7B10F1510BC25 /* Pods_GustoMenuTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EC843AC43434938EC74869 /* Pods_GustoMenuTrackerTests.framework */; };
+		E87437A4276ECE7600F4C2C2 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87437A3276ECE7600F4C2C2 /* FeaturedCell.swift */; };
+		E88259C7276EDDBF00D84856 /* GlobalProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88259C6276EDDBF00D84856 /* GlobalProtocols.swift */; };
+		E88259C9276EEC0C00D84856 /* CurrentWeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88259C8276EEC0C00D84856 /* CurrentWeekCell.swift */; };
+		E8825A12276F0C1900D84856 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8825A11276F0C1900D84856 /* SectionHeader.swift */; };
+		E8825A15276F1B2F00D84856 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8825A14276F1B2F00D84856 /* UIViewController+Ext.swift */; };
+		E8825A17276F1B5D00D84856 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8825A16276F1B5D00D84856 /* CustomAlert.swift */; };
+		E8825A19276F1D8A00D84856 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8825A18276F1D8A00D84856 /* CustomButton.swift */; };
+		E8825A1B276F1DB600D84856 /* CustomTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8825A1A276F1DB600D84856 /* CustomTitleLabel.swift */; };
+		E8825A1D276F1DD300D84856 /* CustomBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8825A1C276F1DD300D84856 /* CustomBodyLabel.swift */; };
+		E8825A20276F209F00D84856 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8825A1F276F209F00D84856 /* AppConstants.swift */; };
+		E8825A22276F24BB00D84856 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8825A21276F24BB00D84856 /* Menu.swift */; };
+		E8825A25276F2E3800D84856 /* NextWeekMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8825A24276F2E3800D84856 /* NextWeekMenu.swift */; };
+		E8825A28276F363100D84856 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8825A27276F363100D84856 /* CustomBackgroundView.swift */; };
+		E8825A2B276F3D1100D84856 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8825A2A276F3D1100D84856 /* CustomTabBarController.swift */; };
+		E8825A2D276F3DAD00D84856 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8825A2C276F3DAD00D84856 /* CartViewController.swift */; };
+		E8958B4A276EC34200458FCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8958B49276EC34200458FCB /* AppDelegate.swift */; };
+		E8958B4C276EC34200458FCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8958B4B276EC34200458FCB /* SceneDelegate.swift */; };
+		E8958B4E276EC34200458FCB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8958B4D276EC34200458FCB /* MenuViewController.swift */; };
+		E8958B51276EC34200458FCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8958B4F276EC34200458FCB /* Main.storyboard */; };
+		E8958B53276EC34400458FCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8958B52276EC34400458FCB /* Assets.xcassets */; };
+		E8958B56276EC34400458FCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8958B54276EC34400458FCB /* LaunchScreen.storyboard */; };
+		E8958B61276EC34400458FCB /* GustoMenuTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8958B60276EC34400458FCB /* GustoMenuTrackerTests.swift */; };
+		E8958B6B276EC34400458FCB /* GustoMenuTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8958B6A276EC34400458FCB /* GustoMenuTrackerUITests.swift */; };
+		E8958B6D276EC34400458FCB /* GustoMenuTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8958B6C276EC34400458FCB /* GustoMenuTrackerUITestsLaunchTests.swift */; };
+		E8C5162B276F418300624E27 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C5162A276F418300624E27 /* DetailsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E8958B5D276EC34400458FCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8958B3E276EC34200458FCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8958B45276EC34200458FCB;
+			remoteInfo = GustoMenuTracker;
+		};
+		E8958B67276EC34400458FCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8958B3E276EC34200458FCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8958B45276EC34200458FCB;
+			remoteInfo = GustoMenuTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28EC843AC43434938EC74869 /* Pods_GustoMenuTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GustoMenuTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F7A09D7DCACAC408F42C4CA /* Pods-GustoMenuTracker-GustoMenuTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GustoMenuTracker-GustoMenuTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-GustoMenuTracker-GustoMenuTrackerUITests/Pods-GustoMenuTracker-GustoMenuTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		69E27A8B92DEF27AF8E1726E /* Pods_GustoMenuTracker_GustoMenuTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GustoMenuTracker_GustoMenuTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C83174BE20920A494A33404 /* Pods_GustoMenuTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GustoMenuTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A32A94E67E4871D7A69CB665 /* Pods-GustoMenuTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GustoMenuTracker.debug.xcconfig"; path = "Target Support Files/Pods-GustoMenuTracker/Pods-GustoMenuTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		BD3C2C859228DF53375868BA /* Pods-GustoMenuTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GustoMenuTracker.release.xcconfig"; path = "Target Support Files/Pods-GustoMenuTracker/Pods-GustoMenuTracker.release.xcconfig"; sourceTree = "<group>"; };
+		D1B9F3A7DB799D30E2FB4176 /* Pods-GustoMenuTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GustoMenuTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-GustoMenuTrackerTests/Pods-GustoMenuTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E379F6EDB707D51A2EFE4889 /* Pods-GustoMenuTracker-GustoMenuTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GustoMenuTracker-GustoMenuTrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-GustoMenuTracker-GustoMenuTrackerUITests/Pods-GustoMenuTracker-GustoMenuTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E87437A3276ECE7600F4C2C2 /* FeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
+		E88259C6276EDDBF00D84856 /* GlobalProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalProtocols.swift; sourceTree = "<group>"; };
+		E88259C8276EEC0C00D84856 /* CurrentWeekCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeekCell.swift; sourceTree = "<group>"; };
+		E8825A11276F0C1900D84856 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		E8825A14276F1B2F00D84856 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		E8825A16276F1B5D00D84856 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		E8825A18276F1D8A00D84856 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E8825A1A276F1DB600D84856 /* CustomTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleLabel.swift; sourceTree = "<group>"; };
+		E8825A1C276F1DD300D84856 /* CustomBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBodyLabel.swift; sourceTree = "<group>"; };
+		E8825A1F276F209F00D84856 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		E8825A21276F24BB00D84856 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		E8825A24276F2E3800D84856 /* NextWeekMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextWeekMenu.swift; sourceTree = "<group>"; };
+		E8825A27276F363100D84856 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
+		E8825A2A276F3D1100D84856 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		E8825A2C276F3DAD00D84856 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		E8958B46276EC34200458FCB /* GustoMenuTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GustoMenuTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8958B49276EC34200458FCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E8958B4B276EC34200458FCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E8958B4D276EC34200458FCB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E8958B50276EC34200458FCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E8958B52276EC34400458FCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E8958B55276EC34400458FCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E8958B57276EC34400458FCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8958B5C276EC34400458FCB /* GustoMenuTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GustoMenuTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8958B60276EC34400458FCB /* GustoMenuTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GustoMenuTrackerTests.swift; sourceTree = "<group>"; };
+		E8958B66276EC34400458FCB /* GustoMenuTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GustoMenuTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8958B6A276EC34400458FCB /* GustoMenuTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GustoMenuTrackerUITests.swift; sourceTree = "<group>"; };
+		E8958B6C276EC34400458FCB /* GustoMenuTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GustoMenuTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E8C5162A276F418300624E27 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		FAA5A8EB6303F81C5496C569 /* Pods-GustoMenuTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GustoMenuTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-GustoMenuTrackerTests/Pods-GustoMenuTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E8958B43276EC34200458FCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7BAC2981BCA1D3543650AF7 /* Pods_GustoMenuTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8958B59276EC34400458FCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB1A3EB498E7B10F1510BC25 /* Pods_GustoMenuTrackerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8958B63276EC34400458FCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				089D62CCFD77CC787953D8B8 /* Pods_GustoMenuTracker_GustoMenuTrackerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6CDDDD22360ED526562F3D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A32A94E67E4871D7A69CB665 /* Pods-GustoMenuTracker.debug.xcconfig */,
+				BD3C2C859228DF53375868BA /* Pods-GustoMenuTracker.release.xcconfig */,
+				4F7A09D7DCACAC408F42C4CA /* Pods-GustoMenuTracker-GustoMenuTrackerUITests.debug.xcconfig */,
+				E379F6EDB707D51A2EFE4889 /* Pods-GustoMenuTracker-GustoMenuTrackerUITests.release.xcconfig */,
+				D1B9F3A7DB799D30E2FB4176 /* Pods-GustoMenuTrackerTests.debug.xcconfig */,
+				FAA5A8EB6303F81C5496C569 /* Pods-GustoMenuTrackerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D2967B76EA3CE7CAF1327BB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C83174BE20920A494A33404 /* Pods_GustoMenuTracker.framework */,
+				69E27A8B92DEF27AF8E1726E /* Pods_GustoMenuTracker_GustoMenuTrackerUITests.framework */,
+				28EC843AC43434938EC74869 /* Pods_GustoMenuTrackerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E87437A2276ECE3C00F4C2C2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E87437A3276ECE7600F4C2C2 /* FeaturedCell.swift */,
+				E88259C8276EEC0C00D84856 /* CurrentWeekCell.swift */,
+				E8825A24276F2E3800D84856 /* NextWeekMenu.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E8825A10276F0C0600D84856 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				E8825A26276F361900D84856 /* New Group */,
+				E8825A11276F0C1900D84856 /* SectionHeader.swift */,
+				E8825A16276F1B5D00D84856 /* CustomAlert.swift */,
+				E8825A18276F1D8A00D84856 /* CustomButton.swift */,
+				E8825A1A276F1DB600D84856 /* CustomTitleLabel.swift */,
+				E8825A1C276F1DD300D84856 /* CustomBodyLabel.swift */,
+				E8825A27276F363100D84856 /* CustomBackgroundView.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		E8825A13276F1B1B00D84856 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8825A14276F1B2F00D84856 /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E8825A1E276F205200D84856 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E8825A1F276F209F00D84856 /* AppConstants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E8825A23276F24C300D84856 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8825A21276F24BB00D84856 /* Menu.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8825A26276F361900D84856 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E8825A29276F3CF600D84856 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				E8825A2A276F3D1100D84856 /* CustomTabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		E8958B3D276EC34200458FCB = {
+			isa = PBXGroup;
+			children = (
+				E8958B48276EC34200458FCB /* GustoMenuTracker */,
+				E8958B5F276EC34400458FCB /* GustoMenuTrackerTests */,
+				E8958B69276EC34400458FCB /* GustoMenuTrackerUITests */,
+				E8958B47276EC34200458FCB /* Products */,
+				C6CDDDD22360ED526562F3D4 /* Pods */,
+				D2967B76EA3CE7CAF1327BB4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E8958B47276EC34200458FCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8958B46276EC34200458FCB /* GustoMenuTracker.app */,
+				E8958B5C276EC34400458FCB /* GustoMenuTrackerTests.xctest */,
+				E8958B66276EC34400458FCB /* GustoMenuTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8958B48276EC34200458FCB /* GustoMenuTracker */ = {
+			isa = PBXGroup;
+			children = (
+				E8C51629276F416200624E27 /* Screens */,
+				E8825A29276F3CF600D84856 /* TabBarController */,
+				E8825A1E276F205200D84856 /* Helpers */,
+				E8825A13276F1B1B00D84856 /* Extensions */,
+				E8825A10276F0C0600D84856 /* ReusableViews */,
+				E87437A2276ECE3C00F4C2C2 /* Cells */,
+				E8958B49276EC34200458FCB /* AppDelegate.swift */,
+				E8958B4B276EC34200458FCB /* SceneDelegate.swift */,
+				E88259C6276EDDBF00D84856 /* GlobalProtocols.swift */,
+				E8958B4F276EC34200458FCB /* Main.storyboard */,
+				E8958B52276EC34400458FCB /* Assets.xcassets */,
+				E8958B54276EC34400458FCB /* LaunchScreen.storyboard */,
+				E8958B57276EC34400458FCB /* Info.plist */,
+				E8825A23276F24C300D84856 /* Model */,
+			);
+			path = GustoMenuTracker;
+			sourceTree = "<group>";
+		};
+		E8958B5F276EC34400458FCB /* GustoMenuTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E8958B60276EC34400458FCB /* GustoMenuTrackerTests.swift */,
+			);
+			path = GustoMenuTrackerTests;
+			sourceTree = "<group>";
+		};
+		E8958B69276EC34400458FCB /* GustoMenuTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E8958B6A276EC34400458FCB /* GustoMenuTrackerUITests.swift */,
+				E8958B6C276EC34400458FCB /* GustoMenuTrackerUITestsLaunchTests.swift */,
+			);
+			path = GustoMenuTrackerUITests;
+			sourceTree = "<group>";
+		};
+		E8C51629276F416200624E27 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E8958B4D276EC34200458FCB /* MenuViewController.swift */,
+				E8825A2C276F3DAD00D84856 /* CartViewController.swift */,
+				E8C5162A276F418300624E27 /* DetailsViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E8958B45276EC34200458FCB /* GustoMenuTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8958B70276EC34400458FCB /* Build configuration list for PBXNativeTarget "GustoMenuTracker" */;
+			buildPhases = (
+				483489F6EC54BB473861015B /* [CP] Check Pods Manifest.lock */,
+				E8958B42276EC34200458FCB /* Sources */,
+				E8958B43276EC34200458FCB /* Frameworks */,
+				E8958B44276EC34200458FCB /* Resources */,
+				CBF4A616FA2BDB5D72C9AEAA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GustoMenuTracker;
+			productName = GustoMenuTracker;
+			productReference = E8958B46276EC34200458FCB /* GustoMenuTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E8958B5B276EC34400458FCB /* GustoMenuTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8958B73276EC34400458FCB /* Build configuration list for PBXNativeTarget "GustoMenuTrackerTests" */;
+			buildPhases = (
+				C62E9AE08CBD519467446E7A /* [CP] Check Pods Manifest.lock */,
+				E8958B58276EC34400458FCB /* Sources */,
+				E8958B59276EC34400458FCB /* Frameworks */,
+				E8958B5A276EC34400458FCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8958B5E276EC34400458FCB /* PBXTargetDependency */,
+			);
+			name = GustoMenuTrackerTests;
+			productName = GustoMenuTrackerTests;
+			productReference = E8958B5C276EC34400458FCB /* GustoMenuTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E8958B65276EC34400458FCB /* GustoMenuTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8958B76276EC34400458FCB /* Build configuration list for PBXNativeTarget "GustoMenuTrackerUITests" */;
+			buildPhases = (
+				7422A1F93DBF3B57BA012989 /* [CP] Check Pods Manifest.lock */,
+				E8958B62276EC34400458FCB /* Sources */,
+				E8958B63276EC34400458FCB /* Frameworks */,
+				E8958B64276EC34400458FCB /* Resources */,
+				E189C7681CDE4EA1A7796CB7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8958B68276EC34400458FCB /* PBXTargetDependency */,
+			);
+			name = GustoMenuTrackerUITests;
+			productName = GustoMenuTrackerUITests;
+			productReference = E8958B66276EC34400458FCB /* GustoMenuTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8958B3E276EC34200458FCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					E8958B45276EC34200458FCB = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					E8958B5B276EC34400458FCB = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = E8958B45276EC34200458FCB;
+					};
+					E8958B65276EC34400458FCB = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = E8958B45276EC34200458FCB;
+					};
+				};
+			};
+			buildConfigurationList = E8958B41276EC34200458FCB /* Build configuration list for PBXProject "GustoMenuTracker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E8958B3D276EC34200458FCB;
+			productRefGroup = E8958B47276EC34200458FCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E8958B45276EC34200458FCB /* GustoMenuTracker */,
+				E8958B5B276EC34400458FCB /* GustoMenuTrackerTests */,
+				E8958B65276EC34400458FCB /* GustoMenuTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E8958B44276EC34200458FCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8958B56276EC34400458FCB /* LaunchScreen.storyboard in Resources */,
+				E8958B53276EC34400458FCB /* Assets.xcassets in Resources */,
+				E8958B51276EC34200458FCB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8958B5A276EC34400458FCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8958B64276EC34400458FCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		483489F6EC54BB473861015B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GustoMenuTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7422A1F93DBF3B57BA012989 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GustoMenuTracker-GustoMenuTrackerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C62E9AE08CBD519467446E7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GustoMenuTrackerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBF4A616FA2BDB5D72C9AEAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GustoMenuTracker/Pods-GustoMenuTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GustoMenuTracker/Pods-GustoMenuTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GustoMenuTracker/Pods-GustoMenuTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E189C7681CDE4EA1A7796CB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GustoMenuTracker-GustoMenuTrackerUITests/Pods-GustoMenuTracker-GustoMenuTrackerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GustoMenuTracker-GustoMenuTrackerUITests/Pods-GustoMenuTracker-GustoMenuTrackerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GustoMenuTracker-GustoMenuTrackerUITests/Pods-GustoMenuTracker-GustoMenuTrackerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E8958B42276EC34200458FCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E88259C7276EDDBF00D84856 /* GlobalProtocols.swift in Sources */,
+				E8958B4E276EC34200458FCB /* MenuViewController.swift in Sources */,
+				E8825A22276F24BB00D84856 /* Menu.swift in Sources */,
+				E88259C9276EEC0C00D84856 /* CurrentWeekCell.swift in Sources */,
+				E8825A17276F1B5D00D84856 /* CustomAlert.swift in Sources */,
+				E8825A19276F1D8A00D84856 /* CustomButton.swift in Sources */,
+				E8825A20276F209F00D84856 /* AppConstants.swift in Sources */,
+				E8825A1D276F1DD300D84856 /* CustomBodyLabel.swift in Sources */,
+				E8825A25276F2E3800D84856 /* NextWeekMenu.swift in Sources */,
+				E8825A12276F0C1900D84856 /* SectionHeader.swift in Sources */,
+				E87437A4276ECE7600F4C2C2 /* FeaturedCell.swift in Sources */,
+				E8825A28276F363100D84856 /* CustomBackgroundView.swift in Sources */,
+				E8825A2B276F3D1100D84856 /* CustomTabBarController.swift in Sources */,
+				E8C5162B276F418300624E27 /* DetailsViewController.swift in Sources */,
+				E8825A1B276F1DB600D84856 /* CustomTitleLabel.swift in Sources */,
+				E8958B4A276EC34200458FCB /* AppDelegate.swift in Sources */,
+				E8825A15276F1B2F00D84856 /* UIViewController+Ext.swift in Sources */,
+				E8825A2D276F3DAD00D84856 /* CartViewController.swift in Sources */,
+				E8958B4C276EC34200458FCB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8958B58276EC34400458FCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8958B61276EC34400458FCB /* GustoMenuTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8958B62276EC34400458FCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8958B6B276EC34400458FCB /* GustoMenuTrackerUITests.swift in Sources */,
+				E8958B6D276EC34400458FCB /* GustoMenuTrackerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E8958B5E276EC34400458FCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8958B45276EC34200458FCB /* GustoMenuTracker */;
+			targetProxy = E8958B5D276EC34400458FCB /* PBXContainerItemProxy */;
+		};
+		E8958B68276EC34400458FCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8958B45276EC34200458FCB /* GustoMenuTracker */;
+			targetProxy = E8958B67276EC34400458FCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E8958B4F276EC34200458FCB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8958B50276EC34200458FCB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E8958B54276EC34400458FCB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8958B55276EC34400458FCB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E8958B6E276EC34400458FCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E8958B6F276EC34400458FCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E8958B71276EC34400458FCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A32A94E67E4871D7A69CB665 /* Pods-GustoMenuTracker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WCYKWTBZ5Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GustoMenuTracker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leandrodiaz.GustoMenuTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E8958B72276EC34400458FCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD3C2C859228DF53375868BA /* Pods-GustoMenuTracker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WCYKWTBZ5Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GustoMenuTracker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leandrodiaz.GustoMenuTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E8958B74276EC34400458FCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1B9F3A7DB799D30E2FB4176 /* Pods-GustoMenuTrackerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WCYKWTBZ5Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gustoMenuTracker.GustoMenuTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GustoMenuTracker.app/GustoMenuTracker";
+			};
+			name = Debug;
+		};
+		E8958B75276EC34400458FCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAA5A8EB6303F81C5496C569 /* Pods-GustoMenuTrackerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WCYKWTBZ5Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gustoMenuTracker.GustoMenuTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GustoMenuTracker.app/GustoMenuTracker";
+			};
+			name = Release;
+		};
+		E8958B77276EC34400458FCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F7A09D7DCACAC408F42C4CA /* Pods-GustoMenuTracker-GustoMenuTrackerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WCYKWTBZ5Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gustoMenuTracker.GustoMenuTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GustoMenuTracker;
+			};
+			name = Debug;
+		};
+		E8958B78276EC34400458FCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E379F6EDB707D51A2EFE4889 /* Pods-GustoMenuTracker-GustoMenuTrackerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WCYKWTBZ5Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gustoMenuTracker.GustoMenuTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GustoMenuTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E8958B41276EC34200458FCB /* Build configuration list for PBXProject "GustoMenuTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8958B6E276EC34400458FCB /* Debug */,
+				E8958B6F276EC34400458FCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8958B70276EC34400458FCB /* Build configuration list for PBXNativeTarget "GustoMenuTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8958B71276EC34400458FCB /* Debug */,
+				E8958B72276EC34400458FCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8958B73276EC34400458FCB /* Build configuration list for PBXNativeTarget "GustoMenuTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8958B74276EC34400458FCB /* Debug */,
+				E8958B75276EC34400458FCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8958B76276EC34400458FCB /* Build configuration list for PBXNativeTarget "GustoMenuTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8958B77276EC34400458FCB /* Debug */,
+				E8958B78276EC34400458FCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E8958B3E276EC34200458FCB /* Project object */;
+}
