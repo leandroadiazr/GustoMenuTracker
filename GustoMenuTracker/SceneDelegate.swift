@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var viewModel: ContentViewModel?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -22,10 +22,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController          = CustomTabBarController()
         window?.makeKeyAndVisible()
         configureNavBar()
+        retreiveItems()
     }
     
     func configureNavBar() {
         UINavigationBar.appearance().tintColor = CustomColors.CustomGreenColor
+    }
+    
+    func retreiveItems() {
+        PersistenceManager.retreiveItems { result in
+            switch result {
+            case .success(let items):
+                self.viewModel?.cartItems?.append(contentsOf: items)
+            case .failure(let error):
+                print(error.rawValue)
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

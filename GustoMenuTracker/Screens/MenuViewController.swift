@@ -8,7 +8,13 @@
 import UIKit
 import Anchorage
 
+
+protocol MenuViewControllerDelegate: AnyObject {
+    func notify(item: Menu)
+}
+
 class MenuViewController: UIViewController {
+    
     struct Layout {
         static let cornerRadius = CGFloat(16)
         static let edgeInsets = CGFloat(20)
@@ -21,6 +27,8 @@ class MenuViewController: UIViewController {
     }
     
     var specials = specialMenu
+    var weekOne = weekOneMenu
+    var weekTwo = weekTwoMenu
     
     lazy var background: UIView = {
         let customView = CustomBackgroundView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 280))
@@ -28,8 +36,9 @@ class MenuViewController: UIViewController {
         customView.label = "Gusto Lunch Tracker"
         return customView
     }()
-
+    
     var collectionView: UICollectionView?
+    weak var menuDelegate: MenuViewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
@@ -46,11 +55,8 @@ class MenuViewController: UIViewController {
         collectionView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView?.showsVerticalScrollIndicator = false
         collectionView?.frame = CGRect(x: 0, y: 180, width: view.bounds.width, height: view.bounds.height - 180 )
-        collectionView?.register(FeaturedCell.self, forCellWithReuseIdentifier: FeaturedCell.reuseID)
-        collectionView?.register(CurrentWeekCell.self, forCellWithReuseIdentifier: CurrentWeekCell.reuseID)
-        collectionView?.register(NextWeekCell.self, forCellWithReuseIdentifier: NextWeekCell.reuseID)
-        collectionView?.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseIdentifier)
         collectionView?.backgroundColor = .clear
+        registerCells()
         
         collectionView?.delegate = self
         collectionView?.dataSource = self
@@ -59,6 +65,13 @@ class MenuViewController: UIViewController {
             return
         }
         view.addSubview(collectionView)
+    }
+    
+    private func registerCells() {
+        collectionView?.register(FeaturedCell.self, forCellWithReuseIdentifier: FeaturedCell.reuseID)
+        collectionView?.register(CurrentWeekCell.self, forCellWithReuseIdentifier: CurrentWeekCell.reuseID)
+        collectionView?.register(NextWeekCell.self, forCellWithReuseIdentifier: NextWeekCell.reuseID)
+        collectionView?.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseIdentifier)
     }
     
     private func customLayout() -> UICollectionViewLayout {
@@ -73,9 +86,29 @@ class MenuViewController: UIViewController {
                 return self.createWeekTwoSection(using: .WeekTwo)
             }
         }
-        
-        return layout}
+        return layout
+    }
     
+    private func addToCart(item: Menu) {
+        PersistenceManager.updateWith(menuItem: item, actionType: .add) {[weak self] error in
+            guard let self = self else {return}
+            guard let error = error else {
+                self.customAlert(title: "Success!...", message: "User added to Cart..", buttonTitle: "Okay")
+                return
+            }
+            self.customAlert(title: "Something went wrong...", message: error.rawValue, buttonTitle: "Ok")
+        }
+    }
+    
+    private func removeFromCart(item: Menu) {
+        PersistenceManager.updateWith(menuItem: item, actionType: .remove) { [weak self] error in
+            guard let self = self else { return }
+            guard let error = error else { return }
+            DispatchQueue.main.async {
+                self.customAlert(title: "Item Removed", message: error.rawValue, buttonTitle: "Continue")
+            }
+        }
+    }
 }
 
 extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -87,9 +120,9 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case 0:
             return specials.count
         case 1:
-            return 6
+            return weekOne.count
         case 2:
-            return 5
+            return weekTwo.count
         default:
             return 6
         }
@@ -100,19 +133,31 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeaturedCell.reuseID, for: indexPath) as! FeaturedCell
             cell.viewImage.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-            cell.buttonAction = { [weak self] in
-                guard let self = self else {return}
-                self.customAlert(title: "title", message: "message", buttonTitle: "Ok")
-            }
             let item = specials[indexPath.item]
             cell.configure(with: item)
+            cell.buttonAction = { [weak self] in
+                guard let self = self else { return }
+                self.addToCart(item: item)
+            }
             return cell
         case 1:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CurrentWeekCell.reuseID, for: indexPath)
-            return cell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CurrentWeekCell.reuseID, for: indexPath) as? CurrentWeekCell
+            let item = weekOne[indexPath.item]
+            cell?.configure(with: item)
+            cell?.buttonAction = { [weak self] in
+                guard let self = self else { return }
+                self.addToCart(item: item)
+            }
+            return cell ?? UICollectionViewCell()
         default:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NextWeekCell.reuseID, for: indexPath)
-            return cell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NextWeekCell.reuseID, for: indexPath) as? NextWeekCell
+            let item = weekOne[indexPath.item]
+            cell?.configure(with: item)
+            cell?.buttonAction = { [weak self] in
+                guard let self = self else { return }
+                self.addToCart(item: item)
+            }
+            return cell ?? UICollectionViewCell()
         }
     }
     
@@ -135,21 +180,27 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
-        let controller = UIViewController()
-        controller.view.backgroundColor = indexPath.section == 0 ? .blue : .yellow
-        self.present(controller, animated: true, completion: nil)
+        let controller = DetailsViewController()
+        switch indexPath.section {
+        case 1:
+            let item = weekOne[indexPath.row]
+            controller.generics.append(item)
+            self.present(controller, animated: true, completion: nil)
+        case 2:
+            let item = weekTwo[indexPath.row]
+            controller.generics.append(item)
+            self.present(controller, animated: true, completion: nil)
+        default:
+            let item = specials[indexPath.row]
+            controller.generics.append(item)
+            self.present(controller, animated: true, completion: nil)
+        }
     }
-    
-    
 }
-
-
 
 extension MenuViewController{
     
-//MARK: FEATURED SECTION
+    //MARK: FEATURED SECTION
     private func createFeaturedSection(using section: Section) -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(200))
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -170,7 +221,6 @@ extension MenuViewController{
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .absolute(160))
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
         layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
-       
         
         let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(350))
         let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: layoutGroupSize, subitems: [layoutItem])
@@ -188,7 +238,6 @@ extension MenuViewController{
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2), heightDimension: .absolute(150))
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
         layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
-       
         
         let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(350))
         let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: layoutGroupSize, subitems: [layoutItem])
@@ -199,7 +248,7 @@ extension MenuViewController{
         
         return layoutSection
     }
-
+    
     func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
         let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93), heightDimension: .estimated(20))
         let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHeaderSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
@@ -212,11 +261,5 @@ extension MenuViewController{
         }
         cell.configure(with: menu)
         return cell
-    }
-}
-
-extension MenuViewController {
-    private func setupConstraints() {
-        background.topAnchor == view.topAnchor
     }
 }

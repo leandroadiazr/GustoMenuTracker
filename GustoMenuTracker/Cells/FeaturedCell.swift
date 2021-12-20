@@ -61,7 +61,7 @@ class FeaturedCell: UICollectionViewCell, SelfConfiguringCell {
         super.init(frame: frame)
         configureViews()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -71,20 +71,13 @@ class FeaturedCell: UICollectionViewCell, SelfConfiguringCell {
         detailsLabel.text = menu.itemDescription
         viewImage.image = UIImage(named: menu.itemImage)
     }
-
+    
     private func configureViews() {
         addCustomShadow(view: self)
         backgroundColor = .white
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = "Title"
         addSubview(titleLabel)
-        
-        detailsLabel.translatesAutoresizingMaskIntoConstraints = false
-        detailsLabel.text = "Details Details Details Details Details "
         addSubview(detailsLabel)
-        
         contentView.addSubview(viewImage)
-        viewImage.image = UIImage(named: "Sushi")
         addSubview(actionButton)
         layer.cornerRadius = Layout.cornerRadius
         setupConstraints()

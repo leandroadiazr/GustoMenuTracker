@@ -11,7 +11,7 @@ class AlertViewController: UIViewController {
     let containerview = CustomAlertContainerView()
     let titleLabel = CustomTitleLabel(textAlignment: .center, fontSize: 20)
     let messageLabel = CustomBodyLabel(textAlignment: .center, fontSize: 12)
-    let actionButton = CustomButton(backgroundColor: .systemBlue, title: "Ok")
+    let actionButton = CustomButton(backgroundColor: .systemBlue, title: "Ok", backgroundImage: nil)
     
     var alertTitle: String?
     var message: String?
@@ -122,7 +122,6 @@ class CustomAlertContainerView: UIView {
         layer.cornerRadius        = 16
         layer.borderColor         = UIColor.white.cgColor
         layer.borderWidth         = 2
-//        layer.opacity             = 0.80
         translatesAutoresizingMaskIntoConstraints = false
     }
     
