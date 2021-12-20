@@ -28,16 +28,14 @@ class CustomTabBarController: UITabBarController {
         
         return UINavigationController(rootViewController: homeNavCon)
     }
-
+    
     func createCartViewController() -> UINavigationController{
         let cartNavCon        = CartViewController()
         cartNavCon.title      = "Cart"
         cartNavCon.tabBarItem = UITabBarItem(title: "Cart", image: UIImage(systemName: "cart"), selectedImage: UIImage(systemName: "cart.fill"))
         tabBarItem.tag = 1
-        
         return UINavigationController(rootViewController: cartNavCon)
     }
-    
 }
 
 extension UITabBar {

@@ -15,7 +15,7 @@ class CurrentWeekCell: UICollectionViewCell, SelfConfiguringCell {
     }
     
     static var reuseID = "CurrentWeekCell"
-
+    
     let titleLabel = CustomTitleLabel(textAlignment: .left, fontSize: 14)
     let detailsLabel = CustomBodyLabel(textAlignment: .justified, fontSize: 12)
     
@@ -49,7 +49,7 @@ class CurrentWeekCell: UICollectionViewCell, SelfConfiguringCell {
         super.init(frame: frame)
         configureViews()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -59,18 +59,14 @@ class CurrentWeekCell: UICollectionViewCell, SelfConfiguringCell {
         detailsLabel.text = menu.itemDescription
         viewImage.image = UIImage(named: menu.itemImage)
     }
-
+    
     private func configureViews() {
         addCustomShadow(view: self)
         backgroundColor = CustomColors.CustomBeigeColor
-        titleLabel.text = "Title"
         addSubview(titleLabel)
         detailsLabel.numberOfLines = 2
-        detailsLabel.text = "Details Details Details Details Details  Details Details Details "
         addSubview(detailsLabel)
-        
         contentView.addSubview(viewImage)
-        viewImage.image = UIImage(named: "Sushi")
         addSubview(actionButton)
         layer.cornerRadius = Layout.cornerRadius
         setupConstraints()
