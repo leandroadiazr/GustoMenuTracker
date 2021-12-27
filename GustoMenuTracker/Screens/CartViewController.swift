@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Anchorage
 
 
 class CartViewController: UIViewController, MenuViewControllerDelegate {
@@ -20,17 +21,36 @@ class CartViewController: UIViewController, MenuViewControllerDelegate {
         }
     }
     
+    let emptyLabel = CustomTitleLabel(textAlignment: .center, fontSize: 35)
+    
     var tableView: UITableView?
     var generics = [Menu]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        setupViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadData()
+        showLoadingView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.dismissLoadingView()
+        }
+        if generics.isEmpty {
+            UIView.animate(withDuration: 0.25) {
+                self.emptyLabel.alpha = 1
+            }
+        } else {
+            self.emptyLabel.alpha = 0
+        }
+        
     }
     
     private func loadData() {
@@ -61,6 +81,17 @@ class CartViewController: UIViewController, MenuViewControllerDelegate {
         tableView?.dataSource = self
         guard let tableView = tableView else { return}
         view.addSubview(tableView)
+    }
+    
+    private func setupViews() {
+        view.addSubview(emptyLabel)
+        emptyLabel.numberOfLines = 0
+        emptyLabel.lineBreakMode = .byWordWrapping
+        emptyLabel.text = "Ohhh... your Cart is empty, Please add something to your cart!"
+        emptyLabel.centerYAnchor == view.centerYAnchor
+        emptyLabel.leadingAnchor == view.leadingAnchor + 10
+        emptyLabel.trailingAnchor == view.trailingAnchor - 10
+        
     }
 }
 

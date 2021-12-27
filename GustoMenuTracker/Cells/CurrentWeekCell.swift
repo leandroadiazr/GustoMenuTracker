@@ -15,9 +15,10 @@ class CurrentWeekCell: UICollectionViewCell, SelfConfiguringCell {
     }
     
     static var reuseID = "CurrentWeekCell"
-    
+
     let titleLabel = CustomTitleLabel(textAlignment: .left, fontSize: 14)
     let detailsLabel = CustomBodyLabel(textAlignment: .justified, fontSize: 12)
+    let dateLabel = CustomTitleLabel(textAlignment: .center, fontSize: 12)
     
     let viewImage: UIImageView = {
         let imageview = UIImageView()
@@ -57,6 +58,7 @@ class CurrentWeekCell: UICollectionViewCell, SelfConfiguringCell {
     func configure(with menu: Menu) {
         titleLabel.text = menu.itemTitle
         detailsLabel.text = menu.itemDescription
+        dateLabel.text = menu.day?.rawValue
         viewImage.image = UIImage(named: menu.itemImage)
     }
     
@@ -68,6 +70,9 @@ class CurrentWeekCell: UICollectionViewCell, SelfConfiguringCell {
         addSubview(detailsLabel)
         contentView.addSubview(viewImage)
         addSubview(actionButton)
+        addSubview(dateLabel)
+        dateLabel.textColor = .white
+        dateLabel.backgroundColor = randomColor()
         layer.cornerRadius = Layout.cornerRadius
         setupConstraints()
     }
@@ -81,6 +86,10 @@ class CurrentWeekCell: UICollectionViewCell, SelfConfiguringCell {
         titleLabel.topAnchor == viewImage.bottomAnchor
         titleLabel.leadingAnchor == leadingAnchor + Layout.edgeInsets
         titleLabel.trailingAnchor == centerXAnchor + Layout.edgeInsets
+        dateLabel.trailingAnchor == trailingAnchor - Layout.edgeInsets
+        dateLabel.leadingAnchor == centerXAnchor - 5
+        dateLabel.bottomAnchor == viewImage.bottomAnchor - 5  
+        
         
         detailsLabel.topAnchor == titleLabel.bottomAnchor
         detailsLabel.leadingAnchor == leadingAnchor + Layout.edgeInsets
@@ -90,5 +99,13 @@ class CurrentWeekCell: UICollectionViewCell, SelfConfiguringCell {
         actionButton.bottomAnchor == bottomAnchor - Layout.edgeInsets
         actionButton.widthAnchor == 74
         actionButton.heightAnchor == 18
+    }
+    
+    fileprivate func randomColor() -> UIColor{
+        let red = CGFloat(drand48())
+        let green = CGFloat(drand48())
+        let blue = CGFloat(drand48())
+        
+        return UIColor(red: red, green: green, blue: blue, alpha: 0.7)
     }
 }

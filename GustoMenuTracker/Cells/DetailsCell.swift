@@ -69,7 +69,6 @@ class DetailsCell: UITableViewCell {
         
         detailsLabel.topAnchor == viewImage.bottomAnchor + padding
         detailsLabel.leadingAnchor == leadingAnchor + padding
-        detailsLabel.trailingAnchor == trailingAnchor - padding
-        
+        detailsLabel.trailingAnchor == trailingAnchor - padding    
     }
 }

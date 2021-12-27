@@ -12,10 +12,11 @@ struct Menu: Codable, Hashable {
     var itemTitle: String
     var itemDescription: String
     var itemImage: String
-    var day: WeeklyMenu
+    var day: WeeklyMenu?
 }
 
 enum WeeklyMenu: String, Codable, Hashable {
+    case specials = "Specials"
     case monday = "Monday"
     case tuesday = "Tuesday"
     case wednesday = "Wednesday"
@@ -31,16 +32,16 @@ let specialMenu = [Menu(id: 0, itemTitle: "Sushi", itemDescription: "Chef's choi
 
 
 let weekOneMenu = [
-    Menu(id: 3, itemTitle: "Chicken & Waffle", itemDescription: " Garlic, herbs and lemon—plus a glug of white wine—mean that these juicy, tender chicken breasts are as delicious as they are healthy.", itemImage: "chicken", day: .monday),
-    Menu(id: 4, itemTitle: "Tacos", itemDescription: "These classic Ground Beef Tacos feature homemade taco meat loaded into freshly fried taco shells. Serve up with all your favorite toppings for an easy family meal that takes less than 30 minutes!.", itemImage: "tacos", day: .tuesday),
+    Menu(id: 3, itemTitle: "Chicken & Waffle", itemDescription: " Garlic, herbs and lemon—plus a glug of white wine—mean that these juicy, tender chicken breasts are as delicious as they are healthy.", itemImage: "chicken", day: .specials),
+    Menu(id: 4, itemTitle: "Tacos", itemDescription: "These classic Ground Beef Tacos feature homemade taco meat loaded into freshly fried taco shells. Serve up with all your favorite toppings for an easy family meal that takes less than 30 minutes!.", itemImage: "tacos", day: .monday),
     
-    Menu(id: 5, itemTitle: "Curry", itemDescription: "Traditional Jamaican curry is made with scotch bonnet peppers and Jamaican curry powder, neither of which I have easy access to here in Milwaukee.", itemImage: "curry", day: .wednesday),
+    Menu(id: 5, itemTitle: "Curry", itemDescription: "Traditional Jamaican curry is made with scotch bonnet peppers and Jamaican curry powder, neither of which I have easy access to here in Milwaukee.", itemImage: "curry", day: .tuesday),
     
-    Menu(id: 6, itemTitle: "Pizza", itemDescription: "Wherever it started, English Muffin Pizza satisfies the need for easy, snackable, kid-friendly, gratifyingly cheesy goodness!", itemImage: "pizza", day: .thursday),
+    Menu(id: 6, itemTitle: "Pizza", itemDescription: "Wherever it started, English Muffin Pizza satisfies the need for easy, snackable, kid-friendly, gratifyingly cheesy goodness!", itemImage: "pizza", day: .wednesday),
     
-    Menu(id: 7, itemTitle: "Sushi", itemDescription: "Chef's choice 10 pieces sushi, 15 piece sashimi, 1 spicy tuna rollm 1 rainbow roll, 1 sweet heart roll.", itemImage: "Sushi", day: .monday),
+    Menu(id: 7, itemTitle: "Sushi", itemDescription: "Chef's choice 10 pieces sushi, 15 piece sashimi, 1 spicy tuna rollm 1 rainbow roll, 1 sweet heart roll.", itemImage: "Sushi", day: .thursday),
     
-    Menu(id: 8, itemTitle: "Tacos de Jamaica", itemDescription: "These delicious Mexican vegan tacos (tacos de jamaica) are made with hibiscus flowers and are garnished with pineapple, onion, cilantro, and salsa verde with avocado", itemImage: "tacos", day: .wednesday)
+    Menu(id: 8, itemTitle: "Tacos de Jamaica", itemDescription: "These delicious Mexican vegan tacos (tacos de jamaica) are made with hibiscus flowers and are garnished with pineapple, onion, cilantro, and salsa verde with avocado", itemImage: "tacos", day: .friday)
 ]
 
 let weekTwoMenu = [

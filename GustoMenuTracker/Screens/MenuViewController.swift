@@ -45,8 +45,21 @@ class MenuViewController: UIViewController {
         configureCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showLoadingView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.dismissLoadingView()
+        }
+    }
+    
     private func configureLayout() {
         view.addSubview(background)
+        view.backgroundColor = CustomColors.CustomBeigeColor
         background.backgroundColor = CustomColors.CustomGreenColor
     }
     
@@ -90,20 +103,25 @@ class MenuViewController: UIViewController {
     }
     
     private func addToCart(item: Menu) {
+        self.showLoadingView()
         PersistenceManager.updateWith(menuItem: item, actionType: .add) {[weak self] error in
             guard let self = self else {return}
+            self.dismissLoadingView()
             guard let error = error else {
                 self.customAlert(title: "Success!...", message: "User added to Cart..", buttonTitle: "Okay")
                 return
             }
             self.customAlert(title: "Something went wrong...", message: error.rawValue, buttonTitle: "Ok")
         }
+        
     }
     
     private func removeFromCart(item: Menu) {
+        self.showLoadingView()
         PersistenceManager.updateWith(menuItem: item, actionType: .remove) { [weak self] error in
             guard let self = self else { return }
             guard let error = error else { return }
+            self.dismissLoadingView()
             DispatchQueue.main.async {
                 self.customAlert(title: "Item Removed", message: error.rawValue, buttonTitle: "Continue")
             }
@@ -162,38 +180,47 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if indexPath.section == 0 {
+        
+        switch indexPath.section {
+        case 0:
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseIdentifier, for: indexPath) as? SectionHeader
             header?.configure(with: "Special of the day")
             header?.title.textColor = .white
             return header ?? UICollectionReusableView()
-        } else if indexPath.section == 1 {
+        case 1:
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseIdentifier, for: indexPath) as? SectionHeader
             header?.configure(with: "This Week Menu")
             return header ?? UICollectionReusableView()
-        } else if indexPath.section == 2 {
+        case 2:
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseIdentifier, for: indexPath) as? SectionHeader
             header?.configure(with: "Next Week Menu")
             return header ?? UICollectionReusableView()
+        default:
+            return UICollectionReusableView()
         }
-        return UICollectionReusableView()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller = DetailsViewController()
         switch indexPath.section {
         case 1:
+            self.showLoadingView()
             let item = weekOne[indexPath.row]
             controller.generics.append(item)
             self.present(controller, animated: true, completion: nil)
+            self.dismissLoadingView()
         case 2:
+            self.showLoadingView()
             let item = weekTwo[indexPath.row]
             controller.generics.append(item)
             self.present(controller, animated: true, completion: nil)
+            self.dismissLoadingView()
         default:
+            self.showLoadingView()
             let item = specials[indexPath.row]
             controller.generics.append(item)
             self.present(controller, animated: true, completion: nil)
+            self.dismissLoadingView()
         }
     }
 }
