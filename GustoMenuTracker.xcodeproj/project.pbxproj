@@ -15,6 +15,8 @@
 		E845BD11276FA8CB00F95257 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E845BD10276FA8CB00F95257 /* ContentViewModel.swift */; };
 		E845BD9C276FAE8200F95257 /* Actionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E845BD9B276FAE8200F95257 /* Actionable.swift */; };
 		E845BDA1276FFD5300F95257 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E845BDA0276FFD5300F95257 /* PersistenceManager.swift */; };
+		E86F30BC2770BD0B005F33CE /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F30BB2770BD0B005F33CE /* OnboardingViewController.swift */; };
+		E86F30BE2770BE45005F33CE /* ReusableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F30BD2770BE45005F33CE /* ReusableViewController.swift */; };
 		E87437A4276ECE7600F4C2C2 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87437A3276ECE7600F4C2C2 /* FeaturedCell.swift */; };
 		E88259C7276EDDBF00D84856 /* GlobalProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88259C6276EDDBF00D84856 /* GlobalProtocols.swift */; };
 		E88259C9276EEC0C00D84856 /* CurrentWeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88259C8276EEC0C00D84856 /* CurrentWeekCell.swift */; };
@@ -73,6 +75,8 @@
 		E845BD10276FA8CB00F95257 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		E845BD9B276FAE8200F95257 /* Actionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actionable.swift; sourceTree = "<group>"; };
 		E845BDA0276FFD5300F95257 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		E86F30BB2770BD0B005F33CE /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		E86F30BD2770BE45005F33CE /* ReusableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewController.swift; sourceTree = "<group>"; };
 		E87437A3276ECE7600F4C2C2 /* FeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
 		E88259C6276EDDBF00D84856 /* GlobalProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalProtocols.swift; sourceTree = "<group>"; };
 		E88259C8276EEC0C00D84856 /* CurrentWeekCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeekCell.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				E8825A1A276F1DB600D84856 /* CustomTitleLabel.swift */,
 				E8825A1C276F1DD300D84856 /* CustomBodyLabel.swift */,
 				E8825A27276F363100D84856 /* CustomBackgroundView.swift */,
+				E86F30BD2770BE45005F33CE /* ReusableViewController.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				E8958B4D276EC34200458FCB /* MenuViewController.swift */,
 				E8825A2C276F3DAD00D84856 /* CartViewController.swift */,
 				E8C5162A276F418300624E27 /* DetailsViewController.swift */,
+				E86F30BB2770BD0B005F33CE /* OnboardingViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -553,12 +559,14 @@
 				E8825A20276F209F00D84856 /* AppConstants.swift in Sources */,
 				E8825A1D276F1DD300D84856 /* CustomBodyLabel.swift in Sources */,
 				E8825A25276F2E3800D84856 /* NextWeekMenu.swift in Sources */,
+				E86F30BC2770BD0B005F33CE /* OnboardingViewController.swift in Sources */,
 				E8825A12276F0C1900D84856 /* SectionHeader.swift in Sources */,
 				E87437A4276ECE7600F4C2C2 /* FeaturedCell.swift in Sources */,
 				E8825A28276F363100D84856 /* CustomBackgroundView.swift in Sources */,
 				E8825A2B276F3D1100D84856 /* CustomTabBarController.swift in Sources */,
 				E8C5162B276F418300624E27 /* DetailsViewController.swift in Sources */,
 				E8825A1B276F1DB600D84856 /* CustomTitleLabel.swift in Sources */,
+				E86F30BE2770BE45005F33CE /* ReusableViewController.swift in Sources */,
 				E845BD9C276FAE8200F95257 /* Actionable.swift in Sources */,
 				E8958B4A276EC34200458FCB /* AppDelegate.swift in Sources */,
 				E845BD11276FA8CB00F95257 /* ContentViewModel.swift in Sources */,

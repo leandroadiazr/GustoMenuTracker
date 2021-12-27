@@ -12,3 +12,5 @@ enum CustomColors {
     static let CustomBeigeColor = #colorLiteral(red: 1, green: 0.9788266417, blue: 0.9398604864, alpha: 1)
     static let CustomLightGray = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
 }
+
+var hasOnboarded: Bool? = false
